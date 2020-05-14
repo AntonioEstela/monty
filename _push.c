@@ -8,6 +8,7 @@
 void _push(stack_t **h, unsigned int times)
 {
 	stack_t *new = malloc(sizeof(stack_t));
+	int num = atoi(tools.numbers);
 
 	if (new == NULL)
 	{
@@ -15,16 +16,10 @@ void _push(stack_t **h, unsigned int times)
 		dprintf(STDERR_FILENO, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	if(!tools.numbers && tools.numbers != 0)
+
+	if (isdigit(num) != 0)
 	{
-		dprintf(STDERR_FILENO, "L%u: usage: push integer\n", times);
-		_free(*h);
-		free(new);
-		exit(EXIT_FAILURE);
-	}
-	if (tools.numbers)
-	{
-		new->n = atoi(tools.numbers);
+		new->n = num;
 		new->prev = NULL;
 		new->next = *h;
 		if (*h)
