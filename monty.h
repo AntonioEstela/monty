@@ -67,6 +67,7 @@ void _sub(stack_t **h, unsigned int times);
 void _div(stack_t **h, unsigned int times);
 void _mul(stack_t **h, unsigned int times);
 void _mod(stack_t **h, unsigned int times);
+void _pchar(stack_t **h, unsigned int times);
 int stack_len(stack_t *h);
 int _isdigit(char *str);
 void _free(stack_t *h);
