@@ -11,7 +11,7 @@ void _div(stack_t **h, unsigned int times)
 
 	if (len < 2)
 	{
-		dprintf(STDERR_FILENO, "L%d: can't sub, stack too short\n", times);
+		dprintf(STDERR_FILENO, "L%d: can't div, stack too short\n", times);
 		_free(*h);
 		exit(EXIT_FAILURE);
 	}
