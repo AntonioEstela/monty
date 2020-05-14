@@ -54,8 +54,11 @@ typedef struct glb
         char *com;
 }tool;
 
+int get_int_at_index(stack_t *head, unsigned int index);
+void delete_nodeint_at_index(stack_t **head, unsigned int index);
 void add_dnodeint_end(stack_t **head, const int n);
 void op_func(int times, char *option, stack_t **h);
+void add_dnodeint(stack_t **head, const int n);
 void _pchar(stack_t **h, unsigned int times);
 void _split(char *buffer, char *delimiters);
 void _pstr(stack_t **h, unsigned int times);
@@ -64,6 +67,7 @@ void _pall(stack_t **h, unsigned int times);
 void _pint(stack_t **h, unsigned int times);
 void _swap(stack_t **h, unsigned int times);
 void _rotl(stack_t **h, unsigned int times);
+void _rotr(stack_t **h, unsigned int times);
 void _pop(stack_t **h, unsigned int times);
 void _add(stack_t **h, unsigned int times);
 void _nop(stack_t **h, unsigned int times);
