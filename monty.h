@@ -56,8 +56,13 @@ void _split(char *buffer, char *delimiters);
 void op_func(int times, char *option, stack_t **h);
 void _free(stack_t *h);
 void _push(stack_t **h, unsigned int times);
-void _pall(stack_t **h, unsigned int timess);
-void _pop(stack_t **stack, unsigned int times);
+void _pall(stack_t **h, unsigned int times);
+void _pint(stack_t **h, unsigned int times);
+void _swap(stack_t **h, unsigned int times);
+void _pop(stack_t **h, unsigned int times);
+void _add(stack_t **h, unsigned int times);
+void _nop(stack_t **h, unsigned int times);
+int stack_len(stack_t *h);
 
 extern tool tools;
 

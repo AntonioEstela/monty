@@ -7,6 +7,10 @@ void op_func(int times, char *option, stack_t **h)
 		{"push", _push},
 		{"pall", _pall},
 		{"pop", _pop},
+		{"pint", _pint},
+		{"swap", _swap},
+		{"add", _add},
+		{"nop", _nop},
 		{NULL, NULL}
 	};
 	for (; command[i].opcode; i++)
@@ -18,6 +22,7 @@ void op_func(int times, char *option, stack_t **h)
 			break;
 		}
 	}
+
 	if (command[i].opcode == NULL)
 	{
 		dprintf(STDERR_FILENO, "L%d: unknown instruction %s\n", times, option);
