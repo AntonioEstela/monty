@@ -9,7 +9,7 @@ void _rotl(stack_t **h, unsigned int times)
 	int tmp;
 
 	if (*h == NULL || h == NULL)
-		exit(EXIT_FAILURE);
+		return;
 	
 	tmp = list->n;
 	add_dnodeint_end(h, tmp);
