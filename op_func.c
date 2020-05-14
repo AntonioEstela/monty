@@ -22,6 +22,7 @@ void op_func(int times, char *option, stack_t **h)
 		{"mul", _mul},
 		{"mod", _mod},
 		{"pchar", _pchar},
+		{"pstr", _pstr},
 		{NULL, NULL}
 	};
 	for (; command[i].opcode; i++)
