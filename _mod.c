@@ -15,6 +15,13 @@ void _mod(stack_t **h, unsigned int times)
 		exit(EXIT_FAILURE);
 	}
 
+	if (list->n == 0)
+	{
+		dprintf(STDERR_FILENO, "L%d: division by zero\n", times);
+		_free(*h);
+		exit(EXIT_FAILURE);
+	}
+
 	list->next->n = list->next->n % list->n;
 
 	_pop(h, times); /* Removing the top item of the stack */
