@@ -13,7 +13,7 @@ void _add(stack_t **h, unsigned int times)
 	if (len < 2)
 	{
 		dprintf(STDERR_FILENO, "L%d: can't swap, stack too short\n", times);
-		_free(*h)
+		_free(*h);
 		exit(EXIT_FAILURE);
 	}
 

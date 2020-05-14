@@ -15,6 +15,13 @@ void _push(stack_t **h, unsigned int times)
 		dprintf(STDERR_FILENO, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
+	if(!tools.numbers && tools.numbers != 0)
+	{
+		dprintf(STDERR_FILENO, "L%u: usage: push integer\n", times);
+		_free(*h);
+		free(new);
+		exit(EXIT_FAILURE);
+	}
 	if (tools.numbers)
 	{
 		new->n = atoi(tools.numbers);

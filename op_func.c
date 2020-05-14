@@ -24,7 +24,6 @@ void op_func(int times, char *option, stack_t **h)
 		if (strcmp(command[i].opcode, option) == 0)
 		{
 			command[i].f(h, times);
-
 			break;
 		}
 	}
