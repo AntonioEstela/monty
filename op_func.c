@@ -1,5 +1,11 @@
 #include "monty.h"
-
+/**
+ * op_func - function that checks for a opcode and execute it.
+ * @h: pointer to the head of the stack
+ * @times: Number of the current line.
+ * @option: the opcode read.
+ * Return: Nothing it is a void function.
+ */
 void op_func(int times, char *option, stack_t **h)
 {
 	int i = 0;
@@ -29,5 +35,5 @@ void op_func(int times, char *option, stack_t **h)
 		_free(*h);
 		exit(EXIT_FAILURE);
 	}
-	
+
 }

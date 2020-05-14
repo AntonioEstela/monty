@@ -38,11 +38,12 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 /**
- * 
- * 
- * 
- * 
- * 
+ * struct gbl - some useful things.
+ * @namefile: name of the file to read.
+ * @nimbers: numbers to add to the stack.
+ * @buffer: the line read by getline.
+ * @com: opcode selected.
+ * Description: some useful things.
  */
 typedef struct glb
 {

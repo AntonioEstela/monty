@@ -1,8 +1,14 @@
 #include "monty.h"
-
+/**
+ * _push - function that pushes an element to the stack.
+ * @h: pointer to the head of the stack
+ * @times: Number of the current line.
+ * Return: Nothing it is a void function.
+ */
 void _push(stack_t **h, unsigned int times)
 {
 	stack_t *new = malloc(sizeof(stack_t));
+
 	if (new == NULL)
 	{
 		_free(new);
@@ -25,5 +31,5 @@ void _push(stack_t **h, unsigned int times)
 		free(new);
 		exit(EXIT_FAILURE);
 	}
-	
+
 }
