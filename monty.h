@@ -65,6 +65,7 @@ void _swap(stack_t **h, unsigned int times);
 void _pop(stack_t **h, unsigned int times);
 void _add(stack_t **h, unsigned int times);
 void _nop(stack_t **h, unsigned int times);
+void _sub(stack_t **h, unsigned int times);
 int stack_len(stack_t *h);
 
 extern tool tools;

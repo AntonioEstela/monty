@@ -17,6 +17,7 @@ void op_func(int times, char *option, stack_t **h)
 		{"swap", _swap},
 		{"add", _add},
 		{"nop", _nop},
+		{"sub", _sub},
 		{NULL, NULL}
 	};
 	for (; command[i].opcode; i++)
