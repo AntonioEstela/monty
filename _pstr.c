@@ -9,10 +9,8 @@ void _pstr(stack_t **h, unsigned int times __attribute__((unused)))
 {
 	stack_t *stack = *h;
 
-	while (stack != NULL && (stack->n < 128 || stack->n > 0))
+	while (stack && stack->n != '\0' && isascii(stack->n))
 	{
-		if (stack->n == 0)
-			break;
 		printf("%c", stack->n);
 		stack = stack->next;
 	}
