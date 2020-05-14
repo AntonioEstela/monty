@@ -54,6 +54,7 @@ typedef struct glb
         char *com;
 }tool;
 
+int _isdigit(char *str);
 void _split(char *buffer, char *delimiters);
 void op_func(int times, char *option, stack_t **h);
 void _free(stack_t *h);

@@ -8,7 +8,6 @@
 void _push(stack_t **h, unsigned int times)
 {
 	stack_t *new = malloc(sizeof(stack_t));
-	int num = atoi(tools.numbers);
 
 	if (new == NULL)
 	{
@@ -17,9 +16,9 @@ void _push(stack_t **h, unsigned int times)
 		exit(EXIT_FAILURE);
 	}
 
-	if (isdigit(num) != 0)
+	if (_isdigit(tools.numbers) == 1)
 	{
-		new->n = num;
+		new->n = atoi(tools.numbers);
 		new->prev = NULL;
 		new->next = *h;
 		if (*h)
