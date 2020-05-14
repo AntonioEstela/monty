@@ -54,10 +54,8 @@ typedef struct glb
         char *com;
 }tool;
 
-int _isdigit(char *str);
-void _split(char *buffer, char *delimiters);
 void op_func(int times, char *option, stack_t **h);
-void _free(stack_t *h);
+void _split(char *buffer, char *delimiters);
 void _push(stack_t **h, unsigned int times);
 void _pall(stack_t **h, unsigned int times);
 void _pint(stack_t **h, unsigned int times);
@@ -66,7 +64,10 @@ void _pop(stack_t **h, unsigned int times);
 void _add(stack_t **h, unsigned int times);
 void _nop(stack_t **h, unsigned int times);
 void _sub(stack_t **h, unsigned int times);
+void _div(stack_t **h, unsigned int times);
 int stack_len(stack_t *h);
+int _isdigit(char *str);
+void _free(stack_t *h);
 
 extern tool tools;
 

@@ -4,7 +4,7 @@
  * 
  * 
  */
-void _sub(stack_t **h, unsigned int times)
+void _div(stack_t **h, unsigned int times)
 {
 	stack_t *list = *h;
 	int len = stack_len(*h);
@@ -16,7 +16,7 @@ void _sub(stack_t **h, unsigned int times)
 		exit(EXIT_FAILURE);
 	}
 
-	list->next->n -= list->n;
+	list->next->n = list->next->n / list->n;
 
-	_pop(h, times); /* Removing the top item of the stack */
+	_pop(h, times);
 }
