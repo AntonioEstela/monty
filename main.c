@@ -1,5 +1,5 @@
 #include "monty.h"
-tool tools = {NULL, NULL, NULL, NULL};
+tool tools = {NULL, NULL, NULL, NULL, STACK};
 /**
  * main - Program that interprets bytecode (.m) and execute opcode
  * @argc: number of arguments.

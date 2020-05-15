@@ -13,6 +13,8 @@ void add_dnodeint_end(stack_t **head, const int n)
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 	{
+		_free(new);
+		dprintf(STDERR_FILENO, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 	new->n = n;
@@ -44,6 +46,8 @@ void add_dnodeint(stack_t **head, const int n)
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 	{
+		_free(new);
+		dprintf(STDERR_FILENO, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 

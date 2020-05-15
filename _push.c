@@ -7,29 +7,25 @@
  */
 void _push(stack_t **h, unsigned int times)
 {
-	stack_t *new = malloc(sizeof(stack_t));
-
-	if (new == NULL)
-	{
-		_free(new);
-		dprintf(STDERR_FILENO, "USAGE: monty file\n");
-		exit(EXIT_FAILURE);
-	}
 
 	if (_isdigit(tools.numbers) == 1)
 	{
-		new->n = atoi(tools.numbers);
-		new->prev = NULL;
-		new->next = *h;
-		if (*h)
-			(*h)->prev = new;
-		*h = new;
+		if (tools.mode == STACK)
+		{
+			add_dnodeint(h, atoi(tools.numbers));
+		}
+		else if (tools.mode == QUEUE)
+		{
+			if (*h == NULL || h == NULL)
+				add_dnodeint(h, atoi(tools.numbers));
+			else
+				add_dnodeint_end(h, atoi(tools.numbers));
+		}
 	}
 	else
 	{
 		dprintf(STDERR_FILENO, "L%u: usage: push integer\n", times);
 		_free(*h);
-		free(new);
 		exit(EXIT_FAILURE);
 	}
 

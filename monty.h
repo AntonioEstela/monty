@@ -8,6 +8,8 @@
 #include <ctype.h>
 
 #define DELIMITERS " \t\n\r"
+#define STACK 1
+#define QUEUE 0
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -52,6 +54,7 @@ typedef struct glb
         char *numbers;
         char *buffer;
         char *com;
+        int mode;
 }tool;
 
 int get_int_at_index(stack_t *head, unsigned int index);
@@ -59,6 +62,8 @@ void delete_nodeint_at_index(stack_t **head, unsigned int index);
 void add_dnodeint_end(stack_t **head, const int n);
 void op_func(int times, char *option, stack_t **h);
 void add_dnodeint(stack_t **head, const int n);
+void _queue(stack_t **h, unsigned int times);
+void _stack(stack_t **h, unsigned int times);
 void _pchar(stack_t **h, unsigned int times);
 void _split(char *buffer, char *delimiters);
 void _pstr(stack_t **h, unsigned int times);
