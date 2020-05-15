@@ -1,7 +1,9 @@
 #include "monty.h"
 /**
- * 
- * 
+ * _pchar - function that prints the char at the top of the stack.
+ * @h: pointer to the head of the stack.
+ * @times: Number of the current line.
+ * Return: Nothing it is a void function.
  */
 void _pchar(stack_t **h, unsigned int times)
 {

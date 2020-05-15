@@ -1,8 +1,10 @@
 #include "monty.h"
 /**
- * 
- * 
- * 
+ * _sub - function that subtracts the top element of the stack
+ *                    from the second top element of the stack.
+ * @h: pointer to the head of the stack
+ * @times: Number of the current line.
+ * Return: Nothing it is a void function.
  */
 void _sub(stack_t **h, unsigned int times)
 {

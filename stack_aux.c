@@ -1,7 +1,9 @@
 #include "monty.h"
 /**
- * 
- * 
+ * add_dnodeint_end - Function that adds a new node at the end of a DLL.
+ * @head: Pointer to the head of the double linked list.
+ * @n: number to add in the node.
+ * Return: Nothing it is a void function.
  */
 void add_dnodeint_end(stack_t **head, const int n)
 {
@@ -29,7 +31,12 @@ void add_dnodeint_end(stack_t **head, const int n)
 	list->next = new;
 	new->prev = list;
 }
-
+/**
+ * add_dnodeint - Function that adds a new node at the beginning of a DLL.
+ * @head: Pointer to the head of the double linked list.
+ * @n: number to add in the node.
+ * Return: Nothing it is a void function.
+ */
 void add_dnodeint(stack_t **head, const int n)
 {
 	stack_t *new;
@@ -51,7 +58,12 @@ void add_dnodeint(stack_t **head, const int n)
 
 	*head = new;
 }
-
+/**
+ * get_int_at_index - Function that returns the nth node of a DLL.
+ * @head: Pointer to the head of the double linked list.
+ * @index: Is the index of the node, starting from 0.
+ * Return: NULL if the node at index position doesn't exitst or the node.
+ */
 int get_int_at_index(stack_t *head, unsigned int index)
 {
 	unsigned int i = 0;
@@ -69,6 +81,12 @@ int get_int_at_index(stack_t *head, unsigned int index)
 	}
 	return (head->n);
 }
+/**
+ * delete_nodeint_at_index - Function that deletes the node at index of a DLL.
+ * @head: Pointer to the head of the double linked list.
+ * @index: index of the node that should be deleted. Index starts at 0
+ * Return: Nothing it is a void function.
+ */
 void delete_nodeint_at_index(stack_t **head, unsigned int index)
 {
 	stack_t *list = (*head);

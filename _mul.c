@@ -1,7 +1,10 @@
 #include "monty.h"
 /**
- * 
- * 
+ * _mul - function that miltiplies the second element of the stack
+ *        with top element of the stack.
+ * @h: pointer to the head of the stack
+ * @times: Number of the current line.
+ * Return: Nothing it is a void function.
  */
 void _mul(stack_t **h, unsigned int times)
 {

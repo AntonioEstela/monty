@@ -1,7 +1,10 @@
 #include "monty.h"
 /**
- * 
- * 
+ * _mod - computes the rest of the division
+ * of the second top element of the stack by the top element of the stack.
+ * @h: pointer to the head of the stack
+ * @times: Number of the current line.
+ * Return: Nothing it is a void function.
  */
 void _mod(stack_t **h, unsigned int times)
 {

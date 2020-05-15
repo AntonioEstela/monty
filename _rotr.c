@@ -1,7 +1,9 @@
 #include "monty.h"
 /**
- * 
- * 
+ * _rotr - function that rotates the stack to the bottom.
+ * @h: pointer to the head of the stack
+ * @times: Number of the current line.
+ * Return: Nothing it is a void function.
  */
 void _rotr(stack_t **h, unsigned int times)
 {
@@ -19,5 +21,5 @@ void _rotr(stack_t **h, unsigned int times)
 
 	delete_nodeint_at_index(h, len);
 
-	add_dnodeint(h, tmp);	
+	add_dnodeint(h, tmp);
 }
